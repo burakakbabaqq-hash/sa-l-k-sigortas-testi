@@ -302,7 +302,6 @@
                 placeholder="0532 123 45 67"
                 autocomplete="tel"
                 inputmode="numeric"
-                maxlength="14"
               />
               <span class="error-msg" id="phoneError">Bu alan zorunludur</span>
             </div>
@@ -342,8 +341,6 @@
     // Phone formatting
     phoneInput.addEventListener('input', function () {
       let digits = this.value.replace(/\D/g, '');
-
-      if (digits.length > 11) digits = digits.slice(0, 11);
 
       let formatted = '';
       if (digits.length <= 4) {
